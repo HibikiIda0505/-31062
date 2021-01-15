@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:卒業制作_31062"
         mc:Ignorable="d"
-        Title="Start" Height="400" Width="700">
+        Title="起動画面" Height="400" Width="700">
     <Grid>
         <Button x:Name="btStart" Content="起動" FontSize="35" HorizontalAlignment="Center" VerticalAlignment="Center" Height="80" Width="200" Click="Button_Click"/>
         <Image HorizontalAlignment="Left" Height="100" Margin="427,239,0,0" VerticalAlignment="Top" Width="100" Source="雨.png" RenderTransformOrigin="0.53,0.09"/>

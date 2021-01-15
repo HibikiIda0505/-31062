@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:卒業制作_31062"
         mc:Ignorable="d"
-        Title="Select" Height="400" Width="700">
+        Title="選択画面" Height="400" Width="700">
     <Grid>
         <Label Content="調べたい都道府県を選択してください" FontSize="35" HorizontalAlignment="Center" VerticalAlignment="Top" Background="Aqua"/>
         <ComboBox x:Name="cbBox" HorizontalAlignment="Left" Margin="23,79,0,0" VerticalAlignment="Top" Width="180"/>

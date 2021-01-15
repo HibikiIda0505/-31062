@@ -19,9 +19,13 @@ namespace 卒業制作_31062
     /// </summary>
     public partial class Result : Window
     {
-        public Result()
+        string SelectedPref { get; set; }    //選択されている都道府県
+
+        public Result(string pref)
         {
             InitializeComponent();
+            SelectedPref = pref;
+            tbPrefecture.Text = SelectedPref;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
