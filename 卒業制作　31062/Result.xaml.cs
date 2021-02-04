@@ -20,12 +20,18 @@ namespace 卒業制作_31062
     public partial class Result : Window
     {
         string SelectedPref { get; set; }    //選択されている都道府県
+        string GetJson { get; set; }    
 
-        public Result(string pref)
+        public Result(string pref,WetherData.Root data) 
         {
             InitializeComponent();
+
             SelectedPref = pref;
+            //GetJson = data;
+
             tbPrefecture.Text = SelectedPref;
+
+            tbTenki.Text = data.weather[0].main;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)

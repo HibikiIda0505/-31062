@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,26 +21,26 @@ namespace 卒業制作_31062
     public partial class Select : Window
     {
         public Select()
-        {
+        { 
             InitializeComponent();
 
-            //北海道・東北地方
+            /*北海道・東北地方
             cbBox.Items.Add("北海道(札幌市)");
             cbBox.Items.Add("青森県(青森市)");
             cbBox.Items.Add("岩手県(盛岡市)");
             cbBox.Items.Add("宮城県(仙台市)");
             cbBox.Items.Add("秋田県(秋田市)");
             cbBox.Items.Add("山形県(山形市)");
-            cbBox.Items.Add("福島県(福島市)");
+            cbBox.Items.Add("福島県(福島市)");*/
             //関東地方
-            cbBox.Items.Add("茨城県(水戸市)");
-            cbBox.Items.Add("栃木県(宇都宮市)");
+            //cbBox.Items.Add("茨城県(水戸市)");
+            //cbBox.Items.Add("栃木県(宇都宮市)");
             cbBox.Items.Add("群馬県(前橋市)");
-            cbBox.Items.Add("埼玉県(さいたま市)");
-            cbBox.Items.Add("千葉県(千葉市)");
-            cbBox.Items.Add("東京都(新宿区)");
-            cbBox.Items.Add("神奈川県(横浜市)");
-            //中部地方
+            //cbBox.Items.Add("埼玉県(さいたま市)");
+            //cbBox.Items.Add("千葉県(千葉市)");
+            //cbBox.Items.Add("東京都(新宿区)");
+            //cbBox.Items.Add("神奈川県(横浜市)");
+            /*中部地方
             cbBox.Items.Add("新潟県(新潟市)");
             cbBox.Items.Add("富山県(富山市)");
             cbBox.Items.Add("石川県(金沢市)");
@@ -76,21 +77,31 @@ namespace 卒業制作_31062
             cbBox.Items.Add("熊本県(熊本市)");
             cbBox.Items.Add("宮崎県(宮崎市)");
             cbBox.Items.Add("鹿児島県(鹿児島市)");
-            cbBox.Items.Add("沖縄県(那覇市)");
+            cbBox.Items.Add("沖縄県(那覇市)");*/
         }
-        
+
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            var api = new OwmApi();
+
+            //天気情報を取得
+            var data = api.GetWeather();
+
+            //var tenki = data;
+
+ 
             if (cbBox.SelectedItem == null)
             {
                 MessageBox.Show("都道府県を選択してください");   
             }
             else
             {
-                Result rs = new Result(cbBox.SelectedItem.ToString());
+                Result rs = new Result(cbBox.SelectedItem.ToString(),data);
+
                 rs.Show();
+
                 this.Close();
-            } 
+            }
         }
     }
 }

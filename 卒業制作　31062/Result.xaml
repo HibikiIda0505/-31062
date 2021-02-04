@@ -5,13 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:卒業制作_31062"
         mc:Ignorable="d"
-        Title="結果画面" Height="400" Width="700">
+        Title="結果画面" Height="400" Width="700" Background="LightSkyBlue">
     <Grid>
         <Button x:Name="btBackMain" Content="起動画面へ" FontSize="20" Margin="509,124,58,196" VerticalAlignment="Center" HorizontalAlignment="Center" Width="125" Height="49" Click="Button_Click"/>
         <Button x:Name="btBackSelect" Content="選択画面へ" FontSize="20" Margin="509,266,58,55" VerticalAlignment="Center" HorizontalAlignment="Center" Width="125" Height="48" Click="btBackSelect_Click"/>
-        <TextBlock HorizontalAlignment="Left" Margin="53,30,0,0" TextWrapping="Wrap" Text="現在の" VerticalAlignment="Top" FontSize="35"/>
-        <TextBlock HorizontalAlignment="Left" Margin="474,30,0,0" TextWrapping="Wrap" Text="の天気" VerticalAlignment="Top" FontSize="35"/>
-        <TextBlock x:Name="tbPrefecture" HorizontalAlignment="Left" Height="47" Margin="189,30,0,0" TextWrapping="Wrap" FontSize="35" VerticalAlignment="Top" Width="250"/>
-        
+        <TextBlock HorizontalAlignment="Left" Margin="45,30,0,0" TextWrapping="Wrap" Text="現在の" VerticalAlignment="Top" FontSize="35"/>
+        <TextBlock HorizontalAlignment="Left" Margin="509,30,0,0" TextWrapping="Wrap" Text="の天気" VerticalAlignment="Top" FontSize="35"/>
+        <TextBlock x:Name="tbPrefecture" HorizontalAlignment="Left" Height="47" Margin="188,30,0,0" TextWrapping="Wrap" FontSize="35" VerticalAlignment="Top" Width="300"/>
+        <TextBox x:Name="tbTenki" HorizontalAlignment="Left" Height="200" Margin="28,114,0,0" VerticalAlignment="Top" Width="300"/>
     </Grid>
 </Window>
